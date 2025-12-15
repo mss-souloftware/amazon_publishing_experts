@@ -47,7 +47,7 @@ export default function CTA() {
                 alt="Amazon publishing experts"
                 width={600}
                 height={600}
-                className="w-full h-auto max-h-96 md:max-h-full object-contain rounded-lg"
+                className="w-full h-[620px] max-h-96 md:max-h-full object-contain rounded-lg"
               />
             </div>
 
@@ -69,46 +69,50 @@ export default function CTA() {
                 </p>
 
                 <form className="w-full space-y-4">
-                  <input
-                    type="text"
-                    name="quote[name]"
-                    required
-                    placeholder="Full Name"
-                    className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
-                  />
+                  <div className="flex gap-4">
+                    <input
+                      type="text"
+                      name="quote[name]"
+                      required
+                      placeholder="Full Name"
+                      className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
+                    />
 
-                  <input
-                    type="email"
-                    name="quote[email]"
-                    required
-                    placeholder="Email"
-                    className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
-                  />
+                    <input
+                      type="email"
+                      name="quote[email]"
+                      required
+                      placeholder="Email"
+                      className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
+                    />
+                  </div>
 
-                  <input
-                    type="tel"
-                    name="quote[phone]"
-                    required
-                    placeholder="Phone Number"
-                    className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
-                  />
+                  <div className="flex gap-4">
+                    <input
+                      type="tel"
+                      name="quote[phone]"
+                      required
+                      placeholder="Phone Number"
+                      className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
+                    />
 
-                  <select
-                    name="quote[services]"
-                    className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
-                  >
-                    <option>Select Services</option>
-                    <option value="Digital Book Publishing">Book Publishing</option>
-                    <option value="Book Marketing Service">Book Marketing</option>
-                    <option value="Ghostwriting Service">Book Cover</option>
-                    <option value="Fiction Writing Service">Audio Book</option>
-                    <option value="Children’s Books Service">Book Illustrations</option>
-                  </select>
+                    <select
+                      name="quote[services]"
+                      className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition"
+                    >
+                      <option>Select Services</option>
+                      <option value="Digital Book Publishing">Book Publishing</option>
+                      <option value="Book Marketing Service">Book Marketing</option>
+                      <option value="Ghostwriting Service">Book Cover</option>
+                      <option value="Fiction Writing Service">Audio Book</option>
+                      <option value="Children’s Books Service">Book Illustrations</option>
+                    </select>
+                  </div>
 
                   <textarea
                     name="quote[comments]"
                     placeholder="About Project"
-                    className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition h-28 resize-none"
+                    className="w-full p-3 rounded-md border border-gray-400 focus:border-[#F89A1C] focus:outline-none transition h-18 resize-none"
                   />
 
                   {/* CHECKBOX */}

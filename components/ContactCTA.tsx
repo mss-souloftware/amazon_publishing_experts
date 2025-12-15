@@ -8,7 +8,7 @@ export default function ContactCTA() {
     <section className="py-12 md:py-16 bg-white cta-signup">
       <div className="container mx-auto px-4">
         <div
-          className="bg-[#F89A1C] max-w-6xl mx-auto rounded-3xl md:rounded-4xl overflow-hidden shadow-2xl"
+          className="bg-[#F89A1C] max-w-9xl mx-auto rounded-3xl md:rounded-4xl overflow-hidden shadow-2xl"
           data-aos="zoom-in"
           data-aos-duration="1000"
         >

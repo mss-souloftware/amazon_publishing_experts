@@ -7,6 +7,7 @@ import ContactCTA from '@/components/ContactCTA';
 import PortfolioShowcase from '@/components/PortfolioShowcase';
 import FAQSection from '@/components/FAQSection';
 import Testimonials from '@/components/Testimonials';
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
 
 
 import bannerImg from '@/public/images/Audiobook-bro.png';
@@ -20,6 +21,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
+import HeroForm from '@/components/HeroForm';
 
 export default function HomePage() {
   const statsImages = [
@@ -73,33 +75,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Hero Form - Fixed & Responsive */}
-          <div className="mt-12 md:mt-16 bg-white shadow-2xl rounded-2xl p-6 md:p-8 max-w-6xl mx-auto -mb-24 md:-mb-32 relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-center mb-6">
-              Ready to Publish? Get Up to <span className="text-red-600">40% Off</span>
-            </h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <input type="text" placeholder="Full Name" required className="w-full border border-gray-300 rounded-lg px-4 py-3" />
-                <input type="email" placeholder="Email" required className="w-full border border-gray-300 rounded-lg px-4 py-3" />
-                <input type="tel" placeholder="Phone Number" required className="w-full border border-gray-300 rounded-lg px-4 py-3" />
-                <input type="text" placeholder="I am looking for..." required className="w-full border border-gray-300 rounded-lg px-4 py-3 lg:col-span-2" />
-              </div>
-              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                <label className="flex items-start text-sm text-gray-600 cursor-pointer">
-                  <input type="checkbox" required defaultChecked className="mr-2 mt-1 flex-shrink-0" />
-                  <span>
-                    Please CHECK THE BOX to COMMUNICATE VIA SMS OR EMAIL (
-                    <a href="/privacy-policy" className="underline font-semibold">PRIVACY POLICY</a> & 
-                    <a href="/terms-and-condition" className="underline font-semibold"> TERMS & CONDITIONS</a>) - Carrier charges may apply for SMS.
-                  </span>
-                </label>
-                <button type="submit" className="bg-[#F89A1C] hover:bg-yellow-400 text-black font-bold py-3 px-10 rounded-lg whitespace-nowrap">
-                  Let's Get Started
-                </button>
-              </div>
-            </form>
-          </div>
+          <HeroForm/>
         </div>
       </section>
 
@@ -119,7 +95,7 @@ export default function HomePage() {
               { icon: "review", title: "Satisfaction Guaranteed", desc: "Your success is our priority." },
             ].map((item, i) => (
               <div key={i} className="space-y-4">
-                <div className="bg-white shadow-lg p-6 rounded-xl text-center">
+                <div className="bg-white shadow-lg p-6 rounded-xl text-center min-h-65 flex flex-col items-center justify-center">
                   <img src={`/images/${item.icon}.png`} alt={item.title} className="w-16 h-16 md:w-20 md:h-20 mx-auto" />
                   <h5 className="text-lg md:text-xl font-bold mt-4">{item.title}</h5>
                   <p className="text-sm md:text-base text-gray-600 mt-2">{item.desc}</p>
@@ -156,10 +132,10 @@ export default function HomePage() {
                 At Amazon Publishing Experts, we understand that self-publishing can be overwhelming. That’s why we provide a range of personalized services designed to bring your ideas to life effortlessly.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
-                {["Expert Guidance", "Thriving Community", "Personalized Support", "Unlock your Potential"].map((t, i) => (
+                {[{name: "Expert Guidance", p:"Gain insights and direction from seasoned writers and professional editors."}, {name: "Personalized Support", p:"Benefit from customized assistance designed to accelerate your progress as an author or editor."}, {name: "Thriving Community",p:"Engage with inspiring individuals from the literary world who can help you grow and stay motivated."}, {name: "Unlock your Potential",p:"Access the tools, resources, and opportunities you need to showcase and elevate your literary talent."}].map((t, i) => (
                   <div key={i}>
-                    <h3 className="text-xl font-bold text-gray-900">{t}</h3>
-                    <p className="text-gray-600 mt-2">Supporting text goes here...</p>
+                    <h3 className="text-xl font-bold text-gray-900">{t.name}</h3>
+                    <p className="text-gray-600 mt-2">{t.p} </p>
                   </div>
                 ))}
               </div>
@@ -216,10 +192,10 @@ export default function HomePage() {
                 In today’s fast-paced digital world, many readers choose listening over reading, and we’re here to help you reach them.
               </p>
               <ul className="space-y-3 text-gray-700 mt-6">
-                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl">Check</span> Skilled professional narrators</li>
-                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl">Check</span> Advanced technology ensures exceptional audio quality</li>
-                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl">Check</span> Tailored sound effects</li>
-                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl">Check</span> Wide distribution platforms</li>
+                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl"><IoCheckmarkDoneOutline /></span> Skilled professional narrators</li>
+                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl"><IoCheckmarkDoneOutline /></span> Advanced technology ensures exceptional audio quality</li>
+                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl"><IoCheckmarkDoneOutline /></span> Tailored sound effects</li>
+                <li className="flex items-start gap-3"><span className="text-[#F89A1C] text-xl"><IoCheckmarkDoneOutline /></span> Wide distribution platforms</li>
               </ul>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <a href="tel:(760) 546-5229" className="btn bg-gray-800 text-white hover:bg-gray-900 px-8 py-4 rounded-lg text-center font-semibold">
@@ -289,15 +265,7 @@ export default function HomePage() {
       <FAQSection />
       <CTA />
 
-      {/* Back to Top Button */}
-      <button
-        id="goto-top"
-        onClick={scrollToTop}
-        className="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-[#F89A1C] hover:bg-yellow-400 text-black p-4 rounded-full shadow-2xl z-50 transition-all hover:scale-110 hidden"
-        aria-label="Back to top"
-      >
-        <FaArrowUp size={24} />
-      </button>
+     
     </>
   );
 }

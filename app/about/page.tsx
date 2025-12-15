@@ -14,6 +14,7 @@ import heroImg from '@/public/images/Reading book-pana.png';
 import editingImg from '@/public/images/editing.webp';
 import emp1 from '@/public/images/emp1.webp';
 import emp2 from '@/public/images/emp2.webp';
+import HeroForm from '@/components/HeroForm';
 
 export default function AboutUs() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -45,35 +46,7 @@ export default function AboutUs() {
             </div>
           </div>
 
-          {/* Hero Form */}
-          <div className="mt-16 bg-white shadow-[0px_0px_30px_rgba(248,154,28,0.3)] rounded-2xl p-6 sm:p-8 max-w-6xl mx-auto -mb-32 relative z-10">
-            <h3 className="text-2xl sm:text-3xl font-bold text-center mb-6">
-              Ready to Publish? Get Up to <span className="text-red-600">40% Off</span>
-            </h3>
-            <form className="space-y-4">
-              {/* Mobile: Stack vertically | Tablet & up: 2 columns | Desktop: 4 columns */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <input type="text" placeholder="Full Name" required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F89A1C]" />
-                <input type="email" placeholder="Email" required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F89A1C]" />
-                <input type="tel" placeholder="Phone Number" required className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F89A1C]" />
-                <input type="text" placeholder="I am looking for..." required className="w-full sm:col-span-2 lg:col-span-1 border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#F89A1C]" />
-              </div>
-
-              <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 text-sm text-gray-600">
-                <label className="flex items-start cursor-pointer">
-                  <input type="checkbox" required defaultChecked className="mr-3 mt-1 shrink-0" />
-                  <span className="leading-tight">
-                    Please CHECK THE BOX to COMMUNICATE VIA SMS OR EMAIL (
-                    <a href="/privacy-policy" className="underline font-semibold">PRIVACY POLICY</a> & 
-                    <a href="/terms-and-condition" className="underline font-semibold"> TERMS & CONDITIONS</a>) - Carrier charges may apply for SMS. Reply STOP or UNSUBSCRIBE to STOP to unsubscribe anytime.
-                  </span>
-                </label>
-                <button type="submit" className="bg-[#F89A1C] hover:bg-yellow-400 text-black font-bold py-3 px-10 rounded-lg transition whitespace-nowrap">
-                  Let's Get Started
-                </button>
-              </div>
-            </form>
-          </div>
+        <HeroForm/>
         </div>
       </section>
 
@@ -165,14 +138,7 @@ export default function AboutUs() {
       <FAQSection />
       <CTA />
 
-      {/* Back to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 bg-[#F89A1C] text-white p-4 rounded-full shadow-lg hover:bg-orange-600 transition z-50"
-        aria-label="Back to top"
-      >
-        <FaArrowUp size={24} />
-      </button>
+ 
     </>
   );
 }

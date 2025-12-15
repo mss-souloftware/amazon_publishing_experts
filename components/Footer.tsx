@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import {FaArrowUp} from "react-icons/fa";
 import Link from "next/link";
 
 // React Icons
@@ -61,6 +62,7 @@ export default function Footer() {
 
     return (
         <footer className="bg-black text-white pt-8 md:pt-12 pb-6">
+            
             <div className="max-w-7xl mx-auto px-4">
                 
                 <div className="text-center mb-8 md:mb-12">
@@ -166,6 +168,14 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+                {/* Back to Top Button */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-22 right-5 bg-[#F89A1C] hover:bg-yellow-400 text-black p-4 rounded-full shadow-2xl z-50 transition-all hover:scale-110"
+        aria-label="Back to top"
+      >
+        <FaArrowUp size={24} />
+      </button>
         </footer>
     );
 }

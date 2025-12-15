@@ -34,8 +34,8 @@ export default function Header() {
                   src="/images/amazon experts logo_FIXED.png"
                   alt="Amazon Publishing Experts"
                   width={180}
-                  height={60}
-                  className="h-12 md:h-14 w-auto"
+                  height={80}
+                  className="h-14 md:h-22 w-auto"
                   priority
                 />
               </Link>
