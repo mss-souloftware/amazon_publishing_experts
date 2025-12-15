@@ -51,8 +51,8 @@ export default function Testimonials() {
           <div className="lg:col-span-7 w-full">
 
             {/* DESKTOP GRID — UNTOUCHED */}
-            <div className="hidden lg:block max-h-[500px] overflow-y-auto pr-2 custom-scrollbar w-full">
-              <div className="grid grid-cols-2 gap-6 w-full">
+            <div className="block max-h-[500px] overflow-y-auto pr-2 custom-scrollbar w-full">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
                 {testimonials.map((t, i) => (
                   <TestimonialCard key={i} {...t} />
                 ))}
@@ -60,7 +60,7 @@ export default function Testimonials() {
             </div>
 
             {/* MOBILE SWIPER — FIXED */}
-            <div className="lg:hidden w-full">
+            {/* <div className="lg:hidden w-full">
               <Swiper
                 modules={[Pagination]}
                 slidesPerView={1}
@@ -74,7 +74,7 @@ export default function Testimonials() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-            </div>
+            </div> */}
 
           </div>
         </div>
