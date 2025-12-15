@@ -171,7 +171,7 @@ export default function Footer() {
                 {/* Back to Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-22 right-5 bg-[#F89A1C] hover:bg-yellow-400 text-black p-4 rounded-full shadow-2xl z-50 transition-all hover:scale-110"
+        className="fixed bottom-25 right-7 md:bottom-35 md:right-15 bg-[#F89A1C] hover:bg-yellow-400 text-black p-4 rounded-full shadow-2xl z-50 transition-all hover:scale-110"
         aria-label="Back to top"
       >
         <FaArrowUp size={24} />

@@ -18,15 +18,15 @@ export default function CTA() {
         </p>
 
         {/* CONTACT ICONS */}
-        <ul className="flex flex-wrap items-center justify-center gap-4 md:gap-6 pt-6 pb-8 text-lg">
+        <ul className="flex flex-wrap items-center justify-center gap-4 md:gap-6 pt-6 pb-8 text-sm md:text-lg">
           <li className="flex items-center gap-2">
             <img src="/images/phone.webp" alt="phone" className="w-10 md:w-14" />
             <Link href="tel:(760) 546-5229" className="text-white hover:text-[#F89A1C] transition">
               (760) 546-5229
             </Link>
           </li>
-          <li className="flex items-center gap-2">
-            <img src="/images/envlop.webp" alt="email" className="w-10 md:w-14" />
+          <li className="flex flex-col items-center gap-2 md:flex-row ">
+            <img src="/images/envlop.webp" alt="email" className="w-8 md:w-14" />
             <Link
               href="mailto:support@amazonpublishingexperts.com"
               className="text-white hover:text-[#F89A1C] transition"
