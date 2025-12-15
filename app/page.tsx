@@ -80,7 +80,7 @@ export default function HomePage() {
       </section>
 
       {/* What We Offer */}
-      <section className="py-12 md:py-20 bg-gray-50">
+      <section className="py-12 mt-15 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h4 className="text-sm font-semibold text-[#F89A1C] uppercase tracking-wider">What We Offer</h4>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-4">
@@ -95,7 +95,7 @@ export default function HomePage() {
               { icon: "review", title: "Satisfaction Guaranteed", desc: "Your success is our priority." },
             ].map((item, i) => (
               <div key={i} className="space-y-4">
-                <div className="bg-white shadow-lg p-6 rounded-xl text-center min-h-65 flex flex-col items-center justify-center">
+                <div className="bg-white shadow-lg p-6 rounded-xl text-center min-h-70 md:min-h-65 flex flex-col items-center justify-center">
                   <img src={`/images/${item.icon}.png`} alt={item.title} className="w-16 h-16 md:w-20 md:h-20 mx-auto" />
                   <h5 className="text-lg md:text-xl font-bold mt-4">{item.title}</h5>
                   <p className="text-sm md:text-base text-gray-600 mt-2">{item.desc}</p>
@@ -238,8 +238,8 @@ export default function HomePage() {
               }}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
               loop={true}
-              pagination={{ clickable: true }}
-              className="pb-12"
+              pagination={{ clickable: true, type: "progressbar" }}
+              className="pb-12 testimonials-swiper"
             >
               {statsImages.map((src, i) => (
                 <SwiperSlide key={i}>

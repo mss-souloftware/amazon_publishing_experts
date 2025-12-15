@@ -36,7 +36,7 @@ const rows = [
 
 export default function PortfolioShowcase() {
   return (
-    <section className="portfolio-showcase py-12 md:py-16  lg:py-20 bg-white overflow-hidden">
+    <section className="portfolio-showcase pt-12 pb-5 md:py-16  lg:py-20 bg-white overflow-hidden">
       <div className=" px-4 md:px-8 lg:px-16 md:w-full">
 
         <div className="text-center mb-10 md:mb-12 lg:mb-16 ">

@@ -19,7 +19,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonial"
-      className="py-16 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50"
+      className="py-3 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start w-full">
@@ -65,11 +65,11 @@ export default function Testimonials() {
                 modules={[Pagination]}
                 slidesPerView={1}
                 spaceBetween={16}
-                pagination={{ clickable: true }}
-                className="w-full"
+                pagination={{ clickable: true, type:"progressbar" }}
+                className="w-full testimonials-swiper"
               >
                 {testimonials.map((t, i) => (
-                  <SwiperSlide key={i} className="pb-6 w-full">
+                  <SwiperSlide key={i} className="pb-10 w-full">
                     <TestimonialCard {...t} />
                   </SwiperSlide>
                 ))}
@@ -79,7 +79,10 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
+      
     </section>
+
+    
   );
 }
 

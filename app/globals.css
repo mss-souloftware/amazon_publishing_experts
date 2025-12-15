@@ -106,3 +106,17 @@
   .testimonials-swiper .swiper-pagination-bullet-active {
     background: #f59e0b;
   }
+
+/* Control progressbar color via Swiper variable */
+.testimonials-swiper {
+  --swiper-pagination-color: #f59e0b;
+}
+
+/* Fix layout break caused by absolute positioning */
+.testimonials-swiper .swiper-pagination-progressbar {
+  position: relative;      /* 👈 THIS fixes layout */
+  margin-top: 1rem;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.15);
+}
