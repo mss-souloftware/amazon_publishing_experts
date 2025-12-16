@@ -97,7 +97,7 @@ export default function PortfolioShowcase() {
             >
               {shelf.books.map((book, i) => (
                 <SwiperSlide key={i} className="item">
-                  <div className={`tilt tilt-${(i % 3) + 1}`}>
+                  <div className={`tilt tilt-1`}>
                     <Image
                       src={`/images/PortfolioBooks/${book}`}
                       alt="Bestseller"
@@ -158,24 +158,7 @@ export default function PortfolioShowcase() {
           transform: rotate(4deg) translateZ(0);
         }
 
-       /* Floating animation on ALL visible items (including partial) */
-.swiper-slide-visible .tilt img {
-  animation: floatY 6s ease-in-out infinite;
-}
 
-/* Optional: Also keep it on duplicates if needed (usually covered already) */
-.swiper-slide-duplicate-visible .tilt img {
-  animation: floatY 6s ease-in-out infinite;
-}
-
-@keyframes floatY {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-16px);
-  }
-}
         @media (max-width: 768px) {
           .portfolio-showcase h2 {
             font-size: 2.5rem !important;
